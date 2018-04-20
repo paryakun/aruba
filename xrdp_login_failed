@@ -1,0 +1,12 @@
+XRDP cant Login
+
+https://askubuntu.com/questions/773626/xrdp-login-failed
+
+
+I managed to fix this problem by editing the /etc/xrdp/sesman.ini file and commenting out the requirement to group membership. Now you can access all accounts.
+
+[Security]
+AllowRootLogin=1
+MaxLoginRetry=4
+#TerminalServerUsers=tsusers
+#TerminalServerAdmins=tsadmins
