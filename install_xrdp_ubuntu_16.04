@@ -1,10 +1,19 @@
 
-sudo apt-get install xrdp
- 
-sudo apt-get update
- 
-sudo apt-get install mate-core mate-desktop-environment mate-notification-daemon
- 
-sudo sed -i.bak '/fi/a #xrdp multiple users configuration \n mate-session \n' /etc/xrdp/startwm.sh
+
+
+/apt-get update
+
+/apt-get install xrdp
+
+/apt-get install xfce4
+
+/echo “xfce4-session” > ~/.xsession
+
+
+
+/etc/init.d/xrdp start
+
+
+/etc/init.d/xrdp status
  
 sudo ufw allow 3389/tcp
